@@ -12,6 +12,8 @@ def healthcheck():
             status=200,
             mimetype='application/json'
     )
+    # Add log details
+    app.logger.info('Status request success')
 
     return response
 
@@ -29,12 +31,18 @@ def metrics():
             status=200,
             mimetype='application/json'
     )
+    # Add log details
+    app.logger.info('Metrics request success')
 
     return response
 
 @app.route("/")
 def hello():
+    # Add log details
+    app.logger.info('Main request success')
     return "Hello World!"
 
 if __name__ == "__main__":
+    # Stream logs into file
+    logging.basicConfig(filename='app.log', level=logging.DEBUG)
     app.run(host='0.0.0.0')
