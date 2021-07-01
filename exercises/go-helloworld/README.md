@@ -30,3 +30,9 @@ Access the application on: http://127.0.0.1:6111/
 - Deploy the go-helloworld application using `kubectl create deploy go-helloworld --image=cakraocha/go-helloworld:v1.0.0`
 - If the pod is not running, install depedencies by running `zypper install apparmor-parser`
 - Forward the port by running `kubectl port-forward --address 0.0.0.0 po/<pod-name> 6111:6111`
+- See the app by using the vagrant ip address with the specified port above
+
+## Edit Kubernetes deployment
+- Enter command `kubectl edit deploy go-helloworld -o yaml`
+- This will let you into the vi mode. Edit where the container name into other version
+- :wq, after that see if the app is up and running by forwarding the port
