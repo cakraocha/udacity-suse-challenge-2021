@@ -36,3 +36,6 @@ Access the application on: http://127.0.0.1:6111/
 - Enter command `kubectl edit deploy go-helloworld -o yaml`
 - This will let you into the vi mode. Edit where the container name into other version
 - :wq, after that see if the app is up and running by forwarding the port
+
+## Delete Kubernetes deployment
+`kubectl delete deploy <deployment-name>`
