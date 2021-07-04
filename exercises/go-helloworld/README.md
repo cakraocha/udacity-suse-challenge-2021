@@ -33,14 +33,17 @@ Access the application on: http://127.0.0.1:6111/
 - See the app by using the vagrant ip address with the specified port above
 
 ## Edit Kubernetes deployment
+
 - Enter command `kubectl edit deploy go-helloworld -o yaml`
 - This will let you into the vi mode. Edit where the container name into other version
 - :wq, after that see if the app is up and running by forwarding the port
 
 ## Delete Kubernetes deployment
+
 `kubectl delete deploy <deployment-name>`
 
 ## Some commands for Kubernetes context
+
 ```
 # create the namespace
 # note: label option is not available with `kubectl create`
