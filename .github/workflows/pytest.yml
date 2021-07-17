@@ -35,9 +35,9 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install  pytest 
+        pip install pytest 
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    ## Run all pytests by inovking the `pytest command`
+    ## Run all pytests by invoking the `pytest command`
     - name: Test with pytest
       run: |
         pytest
