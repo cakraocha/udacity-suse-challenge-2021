@@ -1,0 +1,46 @@
+## Name of the workflow
+name: Docker build and push
+
+## Triggered
+on:
+  push:
+    branches:
+      - 'main'
+  pull_request:
+    branches:
+      - 'main'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    steps:
+      -
+        ## Checkout our code so it will ref existing code that we have
+        ## with latest credentials
+        name: Checkout
+        uses: actions/checkout@v2
+      -
+        ## The docker/setup-qemu action installs QEMU static binaries,
+        ## which are used to run builders for architectures other than the host
+        name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+      -
+        ## To use an extended Docker CLI build capabilities
+        name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+      -
+        name: Login to DockerHub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      -
+        name: Build and push
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: ./exercises/python-helloworld/Dockerfile
+          platforms: linux/amd64
+          push: true
+          tags: cakraocha/python-helloworld:latest
