@@ -20,6 +20,7 @@ Access the application on: http://127.0.0.1:6111/
 - Install k3s using `curl -sfL https://get.k3s.io | sh -`
 - Check if it's up and running using `kubectl get no`, use super user such as `sudo su`
 - Some useful commands:
+
     ```
     kubectl get deploy
     kubectl get no
@@ -27,6 +28,7 @@ Access the application on: http://127.0.0.1:6111/
     kubectl describe no <node-name>
     kubectl describe pod <pod-name>
     ```
+
 - Deploy the go-helloworld application using `kubectl create deploy go-helloworld --image=cakraocha/go-helloworld:v1.0.0`
 - If the pod is not running, install depedencies by running `zypper install apparmor-parser`
 - Forward the port by running `kubectl port-forward --address 0.0.0.0 po/<pod-name> 6111:6111`
