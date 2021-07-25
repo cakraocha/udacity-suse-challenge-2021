@@ -5,9 +5,9 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    namespace: default
+    namespace: project-nginx
     server: https://kubernetes.default.svc
-  project: default
+  project: project-nginx
   source:
     path: project/argocd/nginx-manifests
     repoURL: https://github.com/cakraocha/udacity-suse-challenge-2021
