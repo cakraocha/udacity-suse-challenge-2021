@@ -7,7 +7,7 @@ spec:
   destination:
     namespace: project-nginx
     server: https://kubernetes.default.svc
-  project: project-nginx
+  project: default
   source:
     path: project/argocd/nginx-manifests
     repoURL: https://github.com/cakraocha/udacity-suse-challenge-2021
