@@ -1,3 +1,5 @@
-## Helm Chart 
+# Helm Chart
 
-Place the Helm Chart files in this directory.
+Helm is a package manager that manages Kubernetes manifests through charts.
+
+
