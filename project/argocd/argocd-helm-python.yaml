@@ -12,6 +12,6 @@ spec:
     helm:
       valueFiles:
       - values.yaml
-    path: project/helm/python-helloworld
+    path: project/helm
     repoURL: https://github.com/cakraocha/udacity-suse-challenge-2021
     targetRevision: HEAD
