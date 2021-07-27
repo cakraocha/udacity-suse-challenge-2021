@@ -16,3 +16,8 @@ Helm is a package manager that manages Kubernetes manifests through charts.
 - Check inside the vagrant box using `kubectl get po -n test`
 - Similar steps above if want to use `values-prod.yaml` as the parameter, just use `kubectl apply -f argocd-helm-python-prod.yaml` as the Helm Kubernetes file
 - Sync in ArgoCD IP, and check inside the vagrant box using `kubectl get po -n prod`
+
+## nginx
+
+- Similar to `python-helloworld` above, just more templates, such as `configmap.yaml`, `deployment.yaml`, `namespace.yaml`, and `service.yaml`
+- Make sure to deploy in different namespace so it does not clash with another namespace
