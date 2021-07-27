@@ -1,5 +1,5 @@
 namespace:
-  name: demo
+  name: nginx-test
  
 service:
   port: 8111

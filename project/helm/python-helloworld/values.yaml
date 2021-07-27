@@ -1,5 +1,5 @@
 namespace:
-  name: test
+  name: python-test
  
 image:
   repository: cakraocha/python-helloworld 

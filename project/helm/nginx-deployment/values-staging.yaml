@@ -1,5 +1,5 @@
 namespace:
-  name: staging 
+  name: nginx-staging
  
 service:
   port: 8111
