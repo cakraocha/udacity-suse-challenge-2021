@@ -12,6 +12,6 @@ spec:
     helm:
       valueFiles:
       - values-prod.yaml
-    path: project/helm/nginx-deployment
+    path: project/helm/nginx-deployment/
     repoURL: https://github.com/cakraocha/udacity-suse-challenge-2021
     targetRevision: HEAD
